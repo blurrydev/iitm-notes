@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"type":"text","text":"# Shortest Path Algorithms","id":"2276aba9d6556a37","x":120,"y":-700,"width":559,"height":60,"color":"2"},
+		{"type":"text","text":"## Single Source Shortest Path","id":"ff0fb02d942f0545","x":-160,"y":-500,"width":459,"height":60},
+		{"type":"text","text":"## All Source Shortest Path","id":"24b71380796b330f","x":500,"y":-500,"width":480,"height":60},
+		{"type":"text","text":"### Floyd-Warshall Algorithm","id":"7f7b9bf6cf37c124","x":556,"y":-320,"width":368,"height":120},
+		{"id":"8c706af5a2016a5e","x":131,"y":-320,"width":337,"height":120,"type":"text","text":"### Bellman Ford Algorithm"},
+		{"type":"text","text":"### Dijkstra's Algorithm\n\n[[Week 5#^e7a323]]","id":"428894d3cf1e9b1d","x":-340,"y":-320,"width":318,"height":120}
+	],
+	"edges":[
+		{"id":"2175bd602bf46496","fromNode":"2276aba9d6556a37","fromSide":"bottom","toNode":"ff0fb02d942f0545","toSide":"top"},
+		{"id":"334e254b797d295e","fromNode":"2276aba9d6556a37","fromSide":"bottom","toNode":"24b71380796b330f","toSide":"top"},
+		{"id":"2106ee6c9fd14547","fromNode":"ff0fb02d942f0545","fromSide":"bottom","toNode":"428894d3cf1e9b1d","toSide":"top"},
+		{"id":"50659aefd7271d0f","fromNode":"ff0fb02d942f0545","fromSide":"bottom","toNode":"8c706af5a2016a5e","toSide":"top"},
+		{"id":"b8a2575e94dd6354","fromNode":"24b71380796b330f","fromSide":"bottom","toNode":"7f7b9bf6cf37c124","toSide":"top"}
+	]
+}
