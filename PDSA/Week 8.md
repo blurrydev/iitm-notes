@@ -173,3 +173,16 @@ print(result)
 ```Output
 4.12
 ```
+
+# Multiplication: Karatsuba Algorithm
+
+#### Karatsuba Algorithm
+
+1.  Given two numbers x and y, we split them into two parts each, *a high part* and *a low part*. We do this by selecting a splitting point, which is usually the midpoint of the number with the most digits.
+
+2.  We then recursively compute:
+	1. The product of the high parts 
+	2. The product of the low parts 
+	3. The product of the sum of the high and low parts. This can be done by recursively applying the Karatsuba algorithm.
+
+3.  We then combine the results of these three products using some simple arithmetic to get the final result.

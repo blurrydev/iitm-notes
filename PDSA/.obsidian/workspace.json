@@ -94,8 +94,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "f2674f41ba1abe5f",
@@ -177,8 +176,8 @@
   "active": "ced74b68a102a8a1",
   "lastOpenFiles": [
     "Week 7.md",
-    "Week 6.md",
     "Week 8.md",
+    "Week 6.md",
     "Pasted image 20230314132135.png",
     "Week 5.md",
     "Quiz 1 Revision.canvas",
