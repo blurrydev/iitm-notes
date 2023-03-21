@@ -14,8 +14,8 @@ But when it comes to `B E`, I like movie `B` more than movie `E` but my friend l
 
 ##### Inversions
 In a list of `n` 
-Inversions can range from:
 
+Inversions can range from:
 - `0` : There are no inversions so the rankings are *identical*.
 - `n(n-1)/2` : Every pair is inverted so the rankings are *complete opposite*.
 
@@ -32,9 +32,11 @@ The inversion count is a measure of how far an array is from being sorted. It is
 7. **Time Complexity:** $2T(n/2) + n =$ $O(n*logn)$ 
 
 ```Python
+global count
+
 def mergeAndCount(A,B):
 	(m,n) = (len(A), len(B))
-	(C, i, j, k, count) = ([],0,0,0,0)
+	(C, i, j, k) = ([],0,0,0)
 
 	while k < m+n: # While not all elements have been processed
 		if i == m: # If all elements in list A have been processed
@@ -55,34 +57,37 @@ def mergeAndCount(A,B):
 			C.append(B[j])
 			j += 1
 			count += m-i # Increment the count by the number of elements remaining in list A
-		return(C,count)
+		return C
 
 
-
+count = 0
 def inversionCount(A):
 	n = len(A)
 	if n <=1:
 		return(A,0)
 
-	(L, countL) = inversionCount(A[:n//2])
-	(R, countR) = inversionCount(A[n//2:])
-	(B,countB) = mergeAndCount(L,R)
-	return(B, countL + countR + countB)
+	(L) = inversionCount(A[:n//2])
+	(R) = inversionCount(A[n//2:])
+	(B) = mergeAndCount(L,R)
+	return B
 
 
 L = [2,4,3,1,5]
-print(inversionCount(L)[1])
+print(inversionCount(L))
+print(count)
 ```
 
 ```Output
 4 # 4 is the number of inversions
 ```
 
-The `inversionCount` function first checks if the length of the array is less than or equal to 1. If it is, there are no inversions, and so the function simply returns the original array and 0 (i.e., no inversions).
+The given code implements a function called `inversionCount` that counts the number of inversions in an input array. An inversion occurs when two elements in the array are not in sorted order.
 
-If the length of the array is greater than 1, the function divides the array into two halves `L` and `R` and recursively calls `inversionCount` on each half. This process continues until the length of the array is less than or equal to 1.
+The code uses a divide-and-conquer approach to recursively divide the input array into smaller subarrays until the subarrays contain only one or zero elements. The subarrays are then merged using the `mergeAndCount` function, which counts the number of inversions between the two subarrays.
 
-Once the recursive calls have returned the sorted subarrays `L` and `R` and the counts of their inversions, the function calls `mergeAndCount` to merge the two subarrays together while counting the number of inversions that cross over from one subarray to the other.
+The `mergeAndCount` function works by iterating over the elements in the two subarrays and appending them to a new array in sorted order. Whenever an element from the second subarray is appended to the new array before an element from the first subarray, the count variable is incremented by the number of remaining elements in the first subarray.
+
+The final count of inversions is returned by the `inversionCount` function, which sums the counts of inversions from each recursive call to `mergeAndCount`. The code also prints the count of inversions in the input array.
 
 # Closest Pair of Points
 
@@ -96,6 +101,17 @@ Once the recursive calls have returned the sorted subarrays `L` and `R` and the 
 	2. Split the points into two halves by a vertical line.
 	3. Recursively compute the closest pair in each half
 	4. Compare the shortest distance in each half to the shortest distance across the dividing line.
+
+#### Logic
+- If we have two points then we will directly return the distance.
+- If we have three points then we will directly return the minimum distance.
+- If we have more than three points we will divide the space into two halves and keep dividing it until we have 2 or three points in the space, for each space. 
+	- For the spaces with 2 or 3 points can be solved using the base case.
+- From each space we will get a minimum distance. We will compare all of them and find the minimum of the minimum distance.
+- Now we will also try to find smaller distance across the borders dividing the spaces. This is done so we can find the smallest cross border distance and compare it with the within space distance to find the actual minimum distance.
+
+ ##### How to find the cross border minimum distance
+ 
 
 ```Python
 import math
@@ -120,7 +136,7 @@ def minDistanceRec(Px, Py):
 	m = s //2
 	Qx = Px[:m] # points on the left of the vertical
 	Rx = Px[m:] # points on the right of the vertical
-	xP = Rx[0][0] # minimum X coordinate on the right
+	xR = Rx[0][0] # minimum X coordinate on the right
 
 	# Construct Qy and Ry by iterating all the points in py and adding them in Qy or Ry based on their x-coordinates
 	Qy = []

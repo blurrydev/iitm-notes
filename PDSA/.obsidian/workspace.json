@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4920c61384439533",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Week 7.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "ced74b68a102a8a1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Week 8.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0a29a3e9010d2790",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Week 6.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -159,8 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
