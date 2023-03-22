@@ -228,3 +228,17 @@ Fast-Multiply(x, y, n):
 
 # Recursion Trees
 
+Recursion trees are a useful tool for analyzing recursive algorithms. To create a recursion tree, you start with the initial input to the algorithm at the root of the tree, and then draw a child node for each recursive call made by the algorithm. Each level of the tree represents a new recursive call, and the depth of the tree corresponds to the number of times the recursive calls are made.
+
+To analyze the time complexity of a recursive algorithm using a recursion tree, you need to determine how many leaves are in the tree (i.e., the number of base cases), and how much work is done at each level of the tree. You can then use this information to calculate the total amount of work done by the algorithm.
+
+There are three main cases for analyzing the time complexity of a recursive algorithm using a recursion tree:
+
+1.  The work done at each level of the tree is constant: In this case, the total work done by the algorithm is proportional to the height of the tree, and you can use the formula `O(branches^height)` to calculate the time complexity.
+    
+2.  The work done at each level of the tree is a constant factor larger than the work done at the previous level: In this case, the total work done by the algorithm is proportional to the work done at the bottom level of the tree, and you can use the formula `O(leaves * work_per_leaf)` to calculate the time complexity.
+    
+3.  The work done at each level of the tree is a constant factor smaller than the work done at the previous level: In this case, the total work done by the algorithm is proportional to the work done at the top level of the tree, and you can use the formula `O(work_per_root * height)` to calculate the time complexity.
+    
+
+The Master Theorem is a formula for solving a more general class of recurrence relations that arise in divide-and-conquer algorithms. It provides a way to determine the time complexity of an algorithm based on the size of the input and the amount of work done by the algorithm at each level of the recursion tree.
