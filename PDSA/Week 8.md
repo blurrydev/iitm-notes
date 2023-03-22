@@ -202,3 +202,29 @@ print(result)
 	3. The product of the sum of the high and low parts. This can be done by recursively applying the Karatsuba algorithm.
 
 3.  We then combine the results of these three products using some simple arithmetic to get the final result.
+
+#### Pseudo Code
+
+```Python
+Fast-Multiply(x, y, n):
+	if n=1:
+		return x * y
+	else:
+		m = n//2
+	# divided by 2**m gives the first m nnumber of the orignal number
+	# mod by 2**m gives the last m number of the original number
+		(x_1, x_0) = (x/2**m, x mod 2**m) # bit shifting
+		(y_1, y_0) = (y/2**m, y mod 2**m) # bit shifting
+	# we took 2 because the numbers are binary, it can be changed accordingly
+		(a, b) = (x_1 - x_0, y_1 - y_0)
+
+		p = Fast-Multiply(x_1, y_1, m)
+		q = Fast-Multiply(x_0, y_0, m)
+		r = Fast-Multiply(x_1 - x_0, y_1 - y_0)
+
+
+		return (p * 2**n) + ((p + q - r)* 2**(n/2)) + q
+```
+
+# Recursion Trees
+

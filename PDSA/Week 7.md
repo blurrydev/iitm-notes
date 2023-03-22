@@ -253,7 +253,7 @@ JobId= 5, start time= 10, finish time= 13
 JobId= 6, start time= 13, finish time= 15
 ```
 
-#### Huffman Coding
+#### Huffman Encoding
 
 - In a tree for Huffman coding:
 	- *Less frequent words are at the bottom leaves of the tree*. This is because we can afford to spend a bit more on characters which will be less frequent.
@@ -272,5 +272,7 @@ JobId= 6, start time= 13, finish time= 15
 9. Insert node `z` into the tree.
 10. Repeat steps 3 to 7 for all the characters.
 11. For each non-leaf node assign `0` to the left edge and `1` to the right edge.
+
+> To check if a Huffman encoding is correct, check if one of the encoding of an alphabet can be consumed totally by prefix of another.
 
 ![[Pasted image 20230314132135.png]]
