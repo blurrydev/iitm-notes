@@ -242,3 +242,52 @@ There are three main cases for analyzing the time complexity of a recursive algo
     
 
 The Master Theorem is a formula for solving a more general class of recurrence relations that arise in divide-and-conquer algorithms. It provides a way to determine the time complexity of an algorithm based on the size of the input and the amount of work done by the algorithm at each level of the recursion tree.
+
+
+# Quick Select
+
+#### Difference between normal quick sort and quick select
+
+##### Quick Sort
+
+```Python
+l = pivot
+quickSort(start, l, array)
+quickSort(l+1, end, array)
+```
+
+##### Quick Select
+
+- We're trying to find the $K^{th}$ smallest element in a list which is in descending order.
+- There are three partitions:
+	- Lower: Lower than pivot
+	- Pivot
+	- Upper: Higher than pivot
+
+- Let `m = len(lower)`
+	- `k <= m` then answer lies in `lower`, then `select(lower, k)`
+	- `k = m+1` then answer is `pivot`, then `return(k)`
+	- `k >= m+1` then answer lies in `upper`, then `select(upper, k - (m+1))`
+
+###### Time complexity
+
+$T(n)$ = $max(T(m), T(n - (m+1)))$ + $n$
+
+Worst case: m is 0 or n-1, i.e terminal
+Then, $T(n)$ becomes $O(n^2)$
+
+In this method the complexity largely depends upon the pivot elements, we know this from `quickselect`. 
+
+So we need an optimal algorithm to get the perfect pivot which will not be a terminal element, which is **Median of Median**.
+
+# Median of Median
+
+- Take an array and divide it into a sub arrays of 5 elements.
+- Then sort of the sub arrays
+- Take the median of each sub lists and create a new array with the medians.
+- Now take the median of the array of medians
+- Use it as the **Pivot**.
+
+**Time Complexity:** $O(n)$
+
+**Time complexity of QuickSelect with MoM:** $O(n)$
