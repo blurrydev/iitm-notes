@@ -1,0 +1,2 @@
+- **Dynamic Programming:** It says that whenever I see a problem then I will already have a solution ready for it. It is *Bottom Up*.
+- **Memoization:** It says that whenever we see a solution, we will memorize it to make use of it in future. It is *Top Down*.
