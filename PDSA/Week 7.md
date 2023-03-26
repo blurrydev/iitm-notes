@@ -5,11 +5,25 @@
 - Worst case: Height of the tree, an unbalanced tree with node n may have height $O(n)$.
 
 #### Rotations
+
 We use 4 types of rotations:
-- LL: Which side of the node with more than 1 slope has excess elements? *Left*. Which side did we insert the last node? *Left*.
-- LR: 
-- RL
-- RR
+
+1.  LL Rotation:
+    - Occurs when the balance factor of a node is greater than 1 and its left child's balance factor is greater than or equal to 0.
+    - The rotation involves a right rotation at the unbalanced node, with *the parent becoming the right child of the left child*.
+
+2.  RR Rotation:
+    - Occurs when the balance factor of a node is less than -1 and its right child's balance factor is less than or equal to 0.
+    - The rotation involves a left rotation at the unbalanced node, with *the parent becoming the left child of the right child*.
+
+3.  LR Rotation:
+    - Occurs when the balance factor of a node is greater than 1 and its left child's balance factor is less than 0.
+    - The rotation involves *a left rotation at the left child*, followed by *a right rotation at the unbalanced node*, with the left child becoming the left child of the right child.
+
+4.  RL Rotation:
+    - Occurs when the balance factor of a node is less than -1 and its right child's balance factor is greater than 0.
+    - The rotation involves *a right rotation at the right child*, followed by *a left rotation at the unbalanced node*, with the right child becoming the right child of the left child.
+
 
 #### AVL Tree
 - Balanced trees have height $O(logn)$.

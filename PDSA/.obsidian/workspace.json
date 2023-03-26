@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Week 8.md",
+                "file": "Week 7.md",
                 "mode": "source",
                 "source": false
               }
@@ -26,7 +26,7 @@
               "type": "markdown",
               "state": {
                 "file": "Week 6.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -109,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Week 8.md",
+                "file": "Week 7.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Week 8.md",
+                "file": "Week 7.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -149,7 +149,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Week 8.md"
+                "file": "Week 7.md"
               }
             }
           }
@@ -173,11 +173,11 @@
   },
   "active": "ced74b68a102a8a1",
   "lastOpenFiles": [
-    "Week 9.md",
-    "Week 8.md",
     "Week 6.md",
-    "Week 5 Overview.canvas",
     "Week 7.md",
+    "Week 8.md",
+    "Week 9.md",
+    "Week 5 Overview.canvas",
     "Pasted image 20230314132135.png",
     "Week 5.md",
     "Quiz 1 Revision.canvas",
