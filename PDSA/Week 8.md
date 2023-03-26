@@ -255,7 +255,7 @@ If we can write the complexity of recursion relation as:
  > $f(n) = \Theta(n^c)$
 									
 1. Find $log_b$ $a$
-	- $log_b$ $​a$= $log_2$​ $a$ / $log_2$ $​b​$
+	- $log_b$ $​a$= $log_10$​ $a$ / $log_10$ $​b​$
 2. Now compare it with:
 	- If $c < log_b$ $a$, then $T(n) = O( n^{log_b a} )$
 	- If $c == log_b$ $a$, then $T(n) = O(n^c log n)$
