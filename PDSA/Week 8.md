@@ -232,17 +232,34 @@ Recursion trees are a useful tool for analyzing recursive algorithms. To create 
 
 To analyze the time complexity of a recursive algorithm using a recursion tree, you need to determine how many leaves are in the tree (i.e., the number of base cases), and how much work is done at each level of the tree. You can then use this information to calculate the total amount of work done by the algorithm.
 
-There are three main cases for analyzing the time complexity of a recursive algorithm using a recursion tree:
+#### How to do it
 
-1.  The work done at each level of the tree is constant: In this case, the total work done by the algorithm is proportional to the height of the tree, and you can use the formula `O(branches^height)` to calculate the time complexity.
-    
-2.  The work done at each level of the tree is a constant factor larger than the work done at the previous level: In this case, the total work done by the algorithm is proportional to the work done at the bottom level of the tree, and you can use the formula `O(leaves * work_per_leaf)` to calculate the time complexity.
-    
-3.  The work done at each level of the tree is a constant factor smaller than the work done at the previous level: In this case, the total work done by the algorithm is proportional to the work done at the top level of the tree, and you can use the formula `O(work_per_root * height)` to calculate the time complexity.
-    
+1.  Draw a recursion tree representing the recursive calls made by the algorithm.
+2.  Assign the amount of work done to each node in the tree (usually in terms of the size of the subproblem).
+3.  Determine the number of nodes in the tree and the work done at each level of the tree.
+4.  Use the following formula to express the time complexity in terms of work done:
+    - *If the work done at each level is constant*, the time complexity is `O(work at the root * number of nodes in the tree)`.
+    - *If the work done at each level is a constant factor smaller than the previous level*, the time complexity is `O(work at the leaves * number of leaves)`.
+    - *If the work done at each level is a constant factor larger than the previous level*, the time complexity is `O(work at the root * number of nodes in the tree)`.
 
-The Master Theorem is a formula for solving a more general class of recurrence relations that arise in divide-and-conquer algorithms. It provides a way to determine the time complexity of an algorithm based on the size of the input and the amount of work done by the algorithm at each level of the recursion tree.
 
+> The Master Theorem is a formula for solving a more general class of recurrence relations that arise in divide-and-conquer algorithms. It provides a way to determine the time complexity of an algorithm based on the size of the input and the amount of work done by the algorithm at each level of the recursion tree.
+
+
+# Master's Theorem
+
+If we can write the complexity of recursion relation as:
+
+									$T(n) = aT(n/b) + f(n), a>=1, b>1$
+									$T(n) = aT(n/b) + \Theta(n^c), a>=1, b>1$
+ > $f(n) = \Theta(n^c)$
+									
+1. Find $log_b$ $a$
+	- $log_b$ $​a$= $log_2$​ $a$ / $log_2$ $​b​$
+2. Now compare it with:
+	- If $c < log_b$ $a$, then $T(n) = O( n^{log_b a} )$
+	- If $c == log_b$ $a$, then $T(n) = O(n^c log n)$
+	- If $c > log_b$ $a$, then $T(n) = O(f(n))$
 
 # Quick Select
 
