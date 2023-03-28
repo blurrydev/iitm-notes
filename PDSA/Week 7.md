@@ -289,4 +289,4 @@ JobId= 6, start time= 13, finish time= 15
 
 > To check if a Huffman encoding is correct, check if one of the encoding of an alphabet can be consumed totally by prefix of another.
 
-![[Pasted image 20230314132135.png]]
+![[Huffman Encoding.png]]
