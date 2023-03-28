@@ -41,6 +41,7 @@
 
 ![[Grid Path.png]]
 
+**Complexity:** $O(mn)$
 
 # Longest Common Substring
 
@@ -97,6 +98,7 @@ def LCW(u,v):
 	return(maxlcw)
 ```
 
+**Complexity:** $O(mn)$
 
 # Longest Common Subsequence
 
@@ -138,6 +140,62 @@ def LCS(u,v):
 	return(lcs[0,0])
 ```
 
+**Complexity:** $O(mn)$
 
 # Edit Distance
 
+Let's say there are two words:
+1. Hello
+2. Help
+
+And we're tasked to transform word 1 with word 2, but the constraint is to find the *minimum* number of steps required to perform this task.
+
+There are 3 different types of steps:
+- Insert
+- Delete
+- Substitute
+
+Rules are same as before, `i` and `j` for indices from the first and second word respectively and the lengths of the words are `m` and `n` respectively.
+
+Now, conventionally we will turn the first word into the word underneath.
+
+While iterating (*we're moving from end of the list to the start*):
+- If $a_i$ = $b_j$ , then we move into the next alphabet in both words to check next one.
+	- $ED[i,j]$ = $ED[i+1 , j+1]$
+- If $a_i \ne b_j$ , then we have three criteria for $ED[i,j]$:
+	1. Insert: $ED[i+1, j]$
+		- This is done because once we insert a new character, we need to check it with the character in j. Here `i+1` is the newly inserted character.
+	2. Delete: $ED[i,j+1]$
+		- This is done because once we delete a character we move forward one character so we need to check if we need to make any changes in the new alphabet wrt to the last already checked lower word index.
+	4. Substitute: $ED[i+1, j+1]$
+		- This is because once substitution is done, we're certain that the word is correct and we move on to next word to check for the next one.
+
+#### Base Cases
+
+1. Let's say the upper string is somewhere in between which is index `i` and the lower string is finished at index `n`
+	- $ED[i,n] = m-i$
+	- This says that when this happens then we need to *delete* the rest of the strings to turn it into the lower string. So the number of steps required is `m-i`
+2. Now let's say that the lower string is somewhere in between which is index `j` and the upper string is finished at index `m`
+	- $ED[m,j] = n-j$
+	- This says that if the upper string is shorter than the lower string then we need to do `n-j` *insertions* to turn into lower one.
+
+```Python
+def ED(u,v):
+    import numpy as np
+    (m,n) = (len(u),len(v))
+    ed = np.zeros((m+1,n+1))
+    for i in range(m-1,-1,-1):
+        ed[i,n] = m-i
+    for j in range(n-1,-1,-1):
+        ed[m,j] = n-j
+    for j in range(n-1,-1,-1):
+        for i in range(m-1,-1,-1):
+            if u[i] == v[j]:
+                ed[i,j] = ed[i+1,j+1]
+            else:
+                ed[i,j] = 1 + min(ed[i+1,j+1], ed[i,j+1], ed[i+1,j])
+    return(ed[0,0])
+print(ED('bisect','secret'))
+```
+
+**Complexity:** $O(mn)$
