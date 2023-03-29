@@ -6,23 +6,30 @@
 
 #### Rotations
 
+> - **A left rotation** involves moving a node from its current position to the left of its right child.
+> - **A right rotation** is the opposite of a left rotation. It involves moving a node from its current position to the right of its left child.
+
 We use 4 types of rotations:
 
 1.  LL Rotation:
     - Occurs when the balance factor of a node is greater than 1 and its left child's balance factor is greater than or equal to 0.
     - The rotation involves a right rotation at the unbalanced node, with *the parent becoming the right child of the left child*.
+    - **After the rotation**, the previous right child of the left child becomes the left child of the newly rotated node.
 
-2.  RR Rotation:
+1.  RR Rotation:
     - Occurs when the balance factor of a node is less than -1 and its right child's balance factor is less than or equal to 0.
     - The rotation involves a left rotation at the unbalanced node, with *the parent becoming the left child of the right child*.
+    - **After the rotation**, the previous left child of the right child becomes the right child of the newly rotated node.
 
-3.  LR Rotation:
+2.  LR Rotation:
     - Occurs when the balance factor of a node is greater than 1 and its left child's balance factor is less than 0.
     - The rotation involves *a left rotation at the left child*, followed by *a right rotation at the unbalanced node*, with the left child becoming the left child of the right child.
+    - **After the rotation**, the previous right child of the left child becomes the left child of the newly rotated node, and the previous left child of the right child becomes the right child of the newly rotated node.
 
-4.  RL Rotation:
+3.  RL Rotation:
     - Occurs when the balance factor of a node is less than -1 and its right child's balance factor is greater than 0.
     - The rotation involves *a right rotation at the right child*, followed by *a left rotation at the unbalanced node*, with the right child becoming the right child of the left child.
+    - **After the rotation**, the previous left child of the right child becomes the right child of the newly rotated node, and the previous right child of the left child becomes the left child of the newly rotated node.
 
 
 #### AVL Tree

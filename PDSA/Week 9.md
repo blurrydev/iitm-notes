@@ -69,7 +69,8 @@ Let's say that there two words:
 - $LCS[M,j] = 0$ ; one index is at the end
 - $LCS[i,N] = 0$ ; one index is at the end
 
-![[Longest Common Substring.png]]
+![](Longest%20Common%20Substring.png)
+
 
 #### How to put in in dynamic programming
 

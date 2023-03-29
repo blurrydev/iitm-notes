@@ -13,6 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Week 7.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d1c26803623ac2d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Week 9.md",
                 "mode": "source",
                 "source": false
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Week 9.md",
+                "file": "Week 7.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Week 9.md",
+                "file": "Week 7.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Week 9.md"
+                "file": "Week 7.md"
               }
             }
           }
@@ -149,11 +161,17 @@
   },
   "active": "0a29a3e9010d2790",
   "lastOpenFiles": [
+    "Week 9.md",
+    "attachments/Longest Common Substring.png",
+    "attachments/Longest Common Subsequence.png",
+    "attachments/Huffman Encoding.png",
+    "attachments/Grid Path.png",
+    "attachments/Pasted image 20230329085311.png",
+    "attachments",
+    "Longest Common Substring.png",
     "Week 7.md",
     "Week 6.md",
     "Huffman Encoding.png",
-    "Longest Common Substring.png",
-    "Week 9.md",
     "Grid Path.png",
     "Longest Common Subsequence.png",
     "Week 8.md",
