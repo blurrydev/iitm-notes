@@ -285,13 +285,12 @@ JobId= 6, start time= 13, finish time= 15
 ###### Algorithm
 1. Calculate the frequency of each character in the string.
 2. Sort the characters in increasing order of frequency.
-3. Make each unique character as a leaf node.
-4. Create an empty node `z`, assign minimum frequency to the left child of `z` and the 5. Second minimum frequency to the right child of `z`.
-6. Set the value of `z` as the sum of the below minimum frequencies.
-7. Remove these two minimum frequencies from list of frequencies Q and add their 8. Sum to the list of frequencies.
-9. Insert node `z` into the tree.
-10. Repeat steps 3 to 7 for all the characters.
-11. For each non-leaf node assign `0` to the left edge and `1` to the right edge.
+3. Take two characters with the least frequency and add them as leaf nodes.
+4. Take the sum of the frequency and add it as a parent node.
+5. Take the next least frequency and add it as a sibling node to the one created at the previous step.
+6. Repeat `4` and `5` until all nodes are finished.
+7. Once done, give value `0` to left edges and `1` to the right edges.
+8. Then to get the code for each character just take the values from the root node to the node of the character.
 
 > To check if a Huffman encoding is correct, check if one of the encoding of an alphabet can be consumed totally by prefix of another.
 

@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Week 7.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Week 9.md",
+                "file": "Week 8.md",
                 "mode": "source",
                 "source": false
               }
@@ -161,7 +161,9 @@
   },
   "active": "0a29a3e9010d2790",
   "lastOpenFiles": [
+    "Week 8.md",
     "Week 9.md",
+    "Week 7.md",
     "attachments/Longest Common Substring.png",
     "attachments/Longest Common Subsequence.png",
     "attachments/Huffman Encoding.png",
@@ -169,12 +171,10 @@
     "attachments/Pasted image 20230329085311.png",
     "attachments",
     "Longest Common Substring.png",
-    "Week 7.md",
     "Week 6.md",
     "Huffman Encoding.png",
     "Grid Path.png",
     "Longest Common Subsequence.png",
-    "Week 8.md",
     "Week 5 Overview.canvas",
     "Week 5.md",
     "Quiz 1 Revision.canvas",
