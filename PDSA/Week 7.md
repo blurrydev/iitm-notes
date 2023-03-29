@@ -10,7 +10,6 @@
 > - **A right rotation** is the opposite of a left rotation. It involves moving a node from its current position to the right of its left child.
 
 We use 4 types of rotations:
-
 1.  LL Rotation:
     - Occurs when the balance factor of a node is greater than 1 and its left child's balance factor is greater than or equal to 0.
     - The rotation involves a right rotation at the unbalanced node, with *the parent becoming the right child of the left child*.
