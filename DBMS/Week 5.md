@@ -28,6 +28,10 @@ To check if an FD can be derived from the smaller relations, we can follow these
 
 If any FDs cannot be derived from the smaller relations, then the decomposition does not preserve the dependencies and it needs to be adjusted accordingly.
 
+##### Properties
+- $FD_1 \cup FD_2 = FD^+$
+- 
+
 # Steps to check Normal Form
 
 1. Find the candidate keys
@@ -176,7 +180,7 @@ Main aim is to remove redundant FDs
 3. Now we will remove redundant attributes from the LHS of the FDs which have more than 1 attributes.
 	1. Take FDs with 2 or more attributes on the LHS. ($AB \to C$)
 	2. Now take one attribute from the LHS and find it's closure. ($A^+$)
-	3. If the closure contains other LHS attributes ($A^+ = {B}$) then it ($A$) is redundant attribute and can be removed. Why? Because of transitive property.
+	3. If the closure contains other LHS attributes ($A^+ = {B}$) then it ($B$) is redundant attribute and can be removed. Why? Because of transitive property.
 	4. Else it is non redundant.
 
 # Equivalence of Functional Dependencies

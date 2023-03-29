@@ -1,6 +1,6 @@
 {
 	"nodes":[
-		{"type":"text","text":"#### Not in 3NF\n\n- Find all Non prime attributes\n- Check if any non prime attribute is determining any non prime attribute.\n- $NPA \\to NPA$\n\n#### In 3NF (if any one matches)\n\nIf $X \\to A$ associated with $R$\n- $A \\subseteq X$ ( should be trivial dependency)\n- $A$ is a part of some candidate key (not just a superkey).\n- $X$ is a superkey of $R$\n","id":"de5fcc72306e8850","x":80,"y":443,"width":400,"height":377},
+		{"type":"text","text":"#### Not in 3NF\n\n- Find all Non prime attributes\n- Check if any non prime attribute is determining any non prime attribute.\n- $NPA \\to NPA$\n\n#### In 3NF (if any one matches)\n\nIf $X \\to A$ associated with $R$\n- $A \\subseteq X$ ( should be trivial dependency)\n- $A$ is a part of some candidate key (not just a superkey).\n- $X$ is a superkey of $R$\n","id":"de5fcc72306e8850","x":80,"y":443,"width":400,"height":397},
 		{"type":"text","text":"### Lossless Join & Dependency Preserving","id":"571d7b8ce77f648a","x":-780,"y":195,"width":300,"height":85,"color":"6"},
 		{"type":"text","text":"## BCNF: Boyce Codd Normal Form\n\n- Special case of 3NF\n- Only superkeys are allowed to determine attributes","id":"1c6bbadb125941f3","x":-299,"y":960,"width":294,"height":186},
 		{"type":"text","text":"#### In BCNF (if any one matches)\n\n$X \\to A$ associated with $R$\n- $X \\to A$ should be *Trivial FD*\n- $X$ is a superkey of $R$\n\n","id":"2921bc6d1b38577a","x":110,"y":965,"width":340,"height":177},

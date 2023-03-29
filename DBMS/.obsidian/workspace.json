@@ -11,6 +11,21 @@
             "id": "df2c35030bba454e",
             "type": "leaf",
             "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Normalization.canvas",
+                "viewState": {
+                  "x": -150,
+                  "y": 908.7581300813008,
+                  "zoom": -0.2043511216143863
+                }
+              }
+            }
+          },
+          {
+            "id": "65068ab4bb99c3dc",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "Week 5.md",
@@ -18,23 +33,9 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "6e9d4ee73e893298",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "Normalization.canvas",
-                "viewState": {
-                  "x": -83.99977493286133,
-                  "y": -560.390697479248,
-                  "zoom": 0
-                }
-              }
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -150,8 +151,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -164,7 +164,7 @@
       "canvas:Create new canvas": false
     }
   },
-  "active": "df2c35030bba454e",
+  "active": "65068ab4bb99c3dc",
   "lastOpenFiles": [
     "Normalization.canvas",
     "Week 5.md",
