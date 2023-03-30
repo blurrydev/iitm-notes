@@ -47,7 +47,7 @@ print(WL)
 
 - It computes the *single source shortest path*.
 - Uses *greedy* strategy.
-- Cannot work with graphs with negative edges.
+- Cannot work in graphs with negative edges.
 - Complexity is $O(n^2)$, even with adjacency lists.
 - Dijkstra's algorithm can handle disconnected graphs but will only find the shortest path for the connected component containing the source vertex.
 
