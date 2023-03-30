@@ -16,21 +16,12 @@ The smaller relations that we just created will be naturally joined now.
 
 1.  Identify all functional dependencies (FDs) in the original relation R.
 2.  Decompose R into smaller relations using a set of decomposition rules.
-3.  For each FD in R, check if it can be derived from the smaller relations created in step 2.
-4.  If all the FDs from R can be derived from the smaller relations, then the decomposition preserves the dependencies.
-
-To check if an FD can be derived from the smaller relations, we can follow these steps:
-
-1.  Identify the set of attributes involved in the FD.
-2.  Check which smaller relations contain all the attributes involved in the FD.
-3.  For each smaller relation containing a subset of the attributes in the FD, compute the closure of that subset within the smaller relation. If the closure includes all the attributes involved in the FD, then the FD can be derived from that relation.
-4.  If the FD can be derived from the smaller relations, then the decomposition preserves the dependencies.
-
-If any FDs cannot be derived from the smaller relations, then the decomposition does not preserve the dependencies and it needs to be adjusted accordingly.
+3. Find out all the possible FD in the smaller relations after decomposition from step 2 (avoid trivial dependencies since they are always true).
+4.  For each FD in R, check if it can be derived from the FDs created in step 3 (use closure set if required).
+5.  If all the FDs from R can be derived from the smaller relations, then the decomposition preserves the dependencies else it's not.
 
 ##### Properties
 - $FD_1 \cup FD_2 = FD^+$
-- 
 
 # Steps to check Normal Form
 

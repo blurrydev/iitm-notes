@@ -1,0 +1,32 @@
+{
+	"nodes":[
+		{"type":"text","text":"### Lossless Join & Dependency Preserving","id":"571d7b8ce77f648a","x":-780,"y":195,"width":300,"height":85,"color":"6"},
+		{"type":"text","text":"## BCNF: Boyce Codd Normal Form\n\n- Special case of 3NF\n- Only superkeys are allowed to determine attributes","id":"1c6bbadb125941f3","x":-299,"y":960,"width":294,"height":186},
+		{"type":"text","text":"#### In BCNF (if any one matches)\n\n$X \\to A$ associated with $R$\n- $A \\subseteq X$ ( should be trivial dependency)\n- $X$ is a superkey of $R$\n\n","id":"2921bc6d1b38577a","x":110,"y":965,"width":340,"height":177},
+		{"type":"text","text":"### Lossless Join ","id":"06c5145f9eea3dda","x":-720,"y":1024,"width":200,"height":59,"color":"6"},
+		{"type":"text","text":"## 3NF: Third Normal Forms\n\n- No transitive dependency\n","id":"1dfa576a31322cc6","x":-299,"y":539,"width":294,"height":186},
+		{"type":"text","text":"## 1NF: First Normal Form\n\n- Should contain only atomic values.\n- Should *not* contain multivalued attributes.","id":"e5f357caf0a31db3","x":-299,"y":-210,"width":294,"height":220},
+		{"type":"text","text":"1. Check if any column has multi values attribute.\n2. If it has then it is not in 1NF","id":"36eda681ae6a8687","x":80,"y":-210,"width":340,"height":220},
+		{"type":"text","text":"## 2NF: Second Normal Forms\n\n- No partial dependency\n\n","id":"d93911706dad0204","x":-299,"y":145,"width":294,"height":186},
+		{"type":"text","text":"#### Not in 2NF\n- Find the prime attributes\n- Check if any proper subset of candidate key is determining any attribute.\n\n","id":"da60335a1f861c6b","x":80,"y":128,"width":340,"height":220},
+		{"type":"text","text":"#      Normal Forms","id":"20f26c74186382f2","x":-140,"y":-400,"width":300,"height":80,"color":"1"},
+		{"type":"text","text":"#### How to resolve?\n\n1.  **Identify the primary key:** Determine the primary key for the relation. The primary key should consist of one or more attributes that uniquely identify each row in the table.\n    \n2.  **Identify the functional dependencies:** Determine the functional dependencies in the relation. Identify the non-prime attributes that depend on only a part of the primary key.\n    \n3.  **Create separate tables:** For each partial dependency, create a separate table with the partial key and the dependent attributes. The partial key should be the primary key of the new table, and it should be included in the original table as a foreign key.\n    \n4.  **Repeat the process:** Repeat the process until all tables are in 2NF.\n","id":"fe8954c56be4489a","x":643,"y":200,"width":700,"height":392},
+		{"id":"13c00fb622f2583c","x":643,"y":-300,"width":700,"height":360,"type":"text","text":"#### How to resolve?\n\n1.  **Identify the repeating groups:** Identify attributes that contain multiple values.\n    \n2.  **Create a new relation:** Create a new relation for each repeating group, with the attribute containing the repeating group as the primary key.\n    \n3.  **Move the repeating group attributes:** Move the attributes from the original relation to the new relation.\n    \n4.  **Create a foreign key:** Create a foreign key in the original relation that references the primary key in the new relation.\n    \n5.  **Remove the repeating group attributes:** Remove the repeating group attributes from the original relation.\n    \n6.  **Repeat the process:** Repeat the process for each repeating group in the relation."},
+		{"type":"text","text":"#### Not in 3NF\n\n- Find all Non prime attributes\n- Check if any non prime attribute is determining any non prime attribute.\n- $NPA \\to NPA$\n\n#### In 3NF (if any one matches)\n\nIf $X \\to A$ associated with $R$\n- $A \\subseteq X$ ( should be trivial dependency)\n- $A$ is a part of some candidate key (not just a superkey).\n- $X$ is a superkey of $R$\n","id":"de5fcc72306e8850","x":80,"y":434,"width":400,"height":397}
+	],
+	"edges":[
+		{"id":"7f8e38c5e5a31a05","fromNode":"e5f357caf0a31db3","fromSide":"right","toNode":"36eda681ae6a8687","toSide":"left"},
+		{"id":"d67a47eb11ce2b23","fromNode":"d93911706dad0204","fromSide":"right","toNode":"da60335a1f861c6b","toSide":"left"},
+		{"id":"023fba9e9acad3d7","fromNode":"e5f357caf0a31db3","fromSide":"bottom","toNode":"d93911706dad0204","toSide":"top"},
+		{"id":"78d2d8f3307b0871","fromNode":"1dfa576a31322cc6","fromSide":"right","toNode":"de5fcc72306e8850","toSide":"left"},
+		{"id":"816bc8f2efc06d0f","fromNode":"d93911706dad0204","fromSide":"bottom","toNode":"1dfa576a31322cc6","toSide":"top"},
+		{"id":"90f4cacd6beb4b72","fromNode":"571d7b8ce77f648a","fromSide":"right","toNode":"d93911706dad0204","toSide":"left"},
+		{"id":"7aac3ba2fea2b3a8","fromNode":"571d7b8ce77f648a","fromSide":"right","toNode":"e5f357caf0a31db3","toSide":"left"},
+		{"id":"8d9ec4e8648d7f53","fromNode":"571d7b8ce77f648a","fromSide":"right","toNode":"1dfa576a31322cc6","toSide":"left"},
+		{"id":"d474301cb01e0c7b","fromNode":"1c6bbadb125941f3","fromSide":"right","toNode":"2921bc6d1b38577a","toSide":"left"},
+		{"id":"54f175fadecc9d66","fromNode":"1dfa576a31322cc6","fromSide":"bottom","toNode":"1c6bbadb125941f3","toSide":"top"},
+		{"id":"4df8f65a75ad9a57","fromNode":"06c5145f9eea3dda","fromSide":"right","toNode":"1c6bbadb125941f3","toSide":"left"},
+		{"id":"9678bf6a667d334f","fromNode":"da60335a1f861c6b","fromSide":"right","toNode":"fe8954c56be4489a","toSide":"left"},
+		{"id":"6a96bf7c87eb66f3","fromNode":"36eda681ae6a8687","fromSide":"right","toNode":"13c00fb622f2583c","toSide":"left"}
+	]
+}
