@@ -250,6 +250,10 @@ print(bellmanfordlist(WL,0))
 - No guarantee of uniqueness, there are several shortest path between two nodes.
 - Does not work with negative edges in an undirected graph as it will be declared as a negative weight cycle.
 
+> Can detect negative edge cycle when any diagonal distance goes negative
+
+
+
 #### Algorithm
 1.  Initialization: Create a 2-dimensional array `SP` of size `n x n`, where `n` is the number of vertices in the graph. For each pair of vertices `(i,j)`, initialize `SP[i][j]` to the weight of the edge from vertex `i` to vertex `j`. If there is no edge between vertices `i` and `j`, then set `SP[i][j]` to infinity.
     
