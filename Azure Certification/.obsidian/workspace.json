@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "AI 900 Detailed Notes.md",
+                "file": "DP-900 Cheatsheets.md",
                 "mode": "source",
                 "source": false
               }
@@ -82,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "f2674f41ba1abe5f",
@@ -98,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "AI 900 Detailed Notes.md",
+                "file": "DP-900 Cheatsheets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "AI 900 Detailed Notes.md",
+                "file": "DP-900 Cheatsheets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "AI 900 Detailed Notes.md"
+                "file": "DP-900 Cheatsheets.md"
               }
             }
           }
@@ -162,6 +163,7 @@
   },
   "active": "fba41d99f32efbbc",
   "lastOpenFiles": [
+    "AI 900 Detailed Notes.md",
     "DP-900 Cheatsheets.md",
     "Azure Certification/DP-900 Cheatsheets.md",
     "Azure Certification/Data core concepts Cheatsheets.md",
