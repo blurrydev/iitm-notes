@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3cd5faea6e2b8c8f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "DP-900 Cheatsheets.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "fba41d99f32efbbc",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
