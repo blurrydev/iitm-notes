@@ -21,8 +21,8 @@
 ![[Pasted image 20230419224745.png]]
 
 There are **three** types of indices:
-1. Primary
-2. Clustered
+1. Primary: This is like how we use primary key in DBMS.
+2. Clustered: Here we will 
 3. Secondary
 
 > - Secondary index can only be made from unordered file
