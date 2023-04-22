@@ -21,9 +21,17 @@
 ![[Pasted image 20230419224745.png]]
 
 There are **three** types of indices:
-1. Primary: This is like how we use primary key in DBMS.
-2. Clustered: Here we will 
-3. Secondary
+1. Primary: 
+	- The index whose key specifies the sequential order of the file. Like primary key in database schema.
+	- Sparse
+	- Also called *clustering index*
+	- The search key of the primary index may or may not be a primary key.
+2. Clustered: Here we cluster data and one key points to the first value of the 
+3. Secondary:
+	 - A key which specifies an order different from the sequential order of the file.
+	 - Also called *non-clustering index*.
+
+ - **Index Sequential file:** Ordered sequential file with primary index.
 
 > - Secondary index can only be made from unordered file
 > - Ordered files can create primary or clustered index depending upon if the values are unique or not.
