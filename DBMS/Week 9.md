@@ -155,5 +155,49 @@ B-Tree stands for *Balanced Binary Tree*.
 
 2. Solve the inequality and find n (*the order*).
 
-# Difference between B-Tree and B+ Tree
+# B+ Tree
 
+## Difference between B-Tree and B+ Tree
+
+1. **Node Structure:** In a B-tree, each node contains both keys and pointers to child nodes or data. In a B+ tree, only the leaf nodes contain keys and data, while the internal nodes only contain keys and pointers to child nodes.
+2. **Fanout:** B+ trees have a larger fanout than B-trees, meaning they can store more keys in each node. This results in fewer levels in the tree, which makes searching and traversing faster.
+3. **Indexing:** B-trees are used for both primary and secondary indexing, while B+ trees are primarily used for secondary indexing.
+4. **Sequential Access:** Because B+ trees store all data in the leaf nodes, they are optimized for sequential access. This makes them a good choice for applications that need to perform range queries or other operations that involve sequential data access.
+5. **Range Queries:** B+ trees are better suited for range queries because all the data is stored in the leaf nodes. In a B-tree, range queries may require traversing multiple levels of the tree to find all the relevant data.
+6. **Duplicate Keys:** B+ trees allow duplicate keys in the leaf nodes, while B-trees do not. This means that B+ trees can be used for applications that need to store multiple records with the same key value.
+
+Overall, B+ trees are optimized for disk-based storage and are often used in databases and file systems. B-trees, on the other hand, are used in a wider range of applications, including in-memory data structures and databases.
+
+> Only leaf node will contain the duplicate value and not the intermediate node.
+
+# Advantages and Disadvantages
+
+**Advantages of B-tree:**
+- B-trees are well-suited for storing large amounts of data efficiently.
+- They have a relatively balanced tree structure which allows for efficient search and retrieval operations.
+- They have good locality of reference, which means that data accesses can be made more efficiently.
+- B-trees can be used in a wide range of applications, including file systems, databases, and indexing.
+
+**Disadvantages of B-tree:**
+- B-trees have a more complex structure than some other data structures, which can make them harder to understand and implement.
+- Inserting and deleting data from a B-tree can be more complex and slower than some other data structures.
+- B-trees are not as space-efficient as some other data structures, since they require additional storage for the tree structure.
+
+**Advantages of B+ tree:**
+- B+ trees are well-suited for applications that require efficient range queries.
+- They have a more optimized structure than B-trees, with all data stored in the leaf nodes and internal nodes only containing keys and pointers.
+- B+ trees have good locality of reference, which means that data accesses can be made more efficiently.
+- They have a relatively balanced tree structure which allows for efficient search and retrieval operations.
+
+**Disadvantages of B+ tree:**
+- B+ trees can be more complex to implement than some other data structures, due to their more optimized structure.
+- B+ trees are not as space-efficient as some other data structures, since they require additional storage for the tree structure.
+- Inserting and deleting data from a B+ tree can be more complex and slower than some other data structures, due to the need to rebalance the tree.
+
+# Hashing
+
+- Similar to the one taught in PDSA
+- We can use either open hashing or closed hashing
+- Used on *search keys*.
+
+# Bit map indexing
