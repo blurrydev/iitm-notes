@@ -201,3 +201,13 @@ Overall, B+ trees are optimized for disk-based storage and are often used in dat
 - Used on *search keys*.
 
 # Bit map indexing
+
+- Bitmap Index is a type of index used in databases to quickly retrieve data based on Boolean conditions.
+- It represents the existence or non-existence of a value in a column using bitmaps, which are arrays of bits (0 or 1).
+- Each bit in the bitmap corresponds to a unique value in the indexed column, and its value is set to 1 if the value exists in a row or 0 if it does not.
+- Bitmap Index is best suited for columns with low cardinality, i.e., a small number of distinct values. 
+- It is most efficient for read-heavy workloads and can speed up query performance significantly.
+- Bitmap Index can be used for both equality and range queries.
+- It requires additional storage space for the bitmap indexes, which can be a disadvantage for large datasets.
+- It can also be slower for write-heavy workloads as updating a row requires updating the corresponding bitmaps.
+- Bitmap Index is most commonly used in data warehousing applications, where fast retrieval of large datasets is a requirement.
