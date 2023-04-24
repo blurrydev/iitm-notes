@@ -118,3 +118,19 @@ As we learnt above that during insertion and deletion we need to update all inde
 ![[tree_structure.png]]
 
 - From the above diagram it is clear that number of `record pointer` is equal to the number of `key` which is always *one less than the order (p)*.
+- **Deletion** in 2-3-4 trees happen only at the leaf node.
+	- If the element that we want to delete is a *leaf node with atleast two elements* then we can **directly delete it**.
+	- If the element that we want to delete is in internal node then we need to shift the element from internal node to leaf node, *by following inorder predecessor*, and then delete it.
+	- **How to decide when to use inorder successor or predecessor?**
+		- We will always try to adjust it accordingly based on which node has two or more children and try to avoid the leaf node with one child.
+	- **What do we do when there is just one child for both nodes?**
+		- In such case we will merge the node with the bottom two to make it into a node with three elements and then delete the element from the node.
+		- **This is only applicable to intermediate nodes and not leaf nodes.**
+		- There's no way we can delete a leaf node with single value.
+
+> - *Inorder predecessor is the process where we find the element which is smaller than the current value but largest of the values less than the current value.*
+> - Inorder successor is same as above but here instead of taking the highest smallest value we take the smallest highest values, i.e. smallest value which is higher than the current value.
+
+
+
+
