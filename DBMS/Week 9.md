@@ -87,19 +87,6 @@ It's important to note that *when a record is deleted, any indexes that point to
 
 As we learnt above that during insertion and deletion we need to update all index table, so it becomes a mess in multi-level indexing hence we will implement tree structure to overcome this issue.
 
-## B-Tree
-
-- **Order:** Maximum number of children parent can have. Let's say that the order of a B-tree is `p`, then
-
-![[Order relation.png]]
-
-- **Record Pointer:** A record pointer is a pointer to a specific record in a file or database. When a key is searched for in a B-tree, the record pointer associated with that key is used to retrieve the corresponding record. This allows for efficient retrieval of individual records.
-
-- **Block Pointer:** A block pointer is a pointer to another node in the B-tree. Since B-trees are typically stored on disk or other secondary storage devices, it is important to minimize the number of disk accesses required to search the tree. By using block pointers, B-trees can be efficiently navigated with a minimal number of disk accesses.
-
-- **Key:** Key tell us on what base we're searching for the pointer.
-	- Number of `Keys` = Number of `record pointers`
-
 ## Properties
 
 - All leaves are at the same depth, i.e, height of all leaf nodes are same.
@@ -126,11 +113,47 @@ As we learnt above that during insertion and deletion we need to update all inde
 	- **What do we do when there is just one child for both nodes?**
 		- In such case we will merge the node with the bottom two to make it into a node with three elements and then delete the element from the node.
 		- **This is only applicable to intermediate nodes and not leaf nodes.**
-		- There's no way we can delete a leaf node with single value.
+		- There's no way we can delete a leaf node with single value, if it's parent node also has single element.
+		- However, if the parent of a leaf node with single element has two or more elements then we can merge the leaf node with one of the element from the parent node and then delete it.
+		- This is done to preserve the property that says that *all leaf nodes will be at the same level*.
 
 > - *Inorder predecessor is the process where we find the element which is smaller than the current value but largest of the values less than the current value.*
 > - Inorder successor is same as above but here instead of taking the highest smallest value we take the smallest highest values, i.e. smallest value which is higher than the current value.
 
+### Summary of deletion:
 
+When we delete a node from a 2-3-4 tree, there are three possible scenarios:
+1. **Case 1: Deleting a node from a leaf node with more than one key**
+   In this case, we simply remove the key and the corresponding record pointer from the leaf node. This does not violate any rules of the 2-3-4 tree.
+2. **Case 2: Deleting a node from a leaf node with only one key**
+   In this case, we remove the key and the corresponding record pointer from the leaf node. Since the leaf node must have at least one key, we need to redistribute keys from a neighboring leaf node or merge two leaf nodes to ensure that the tree remains balanced.
+3. **Case 3: Deleting a node from an internal node**
+   When we delete an internal node, we need to replace it with the minimum key from its right sub-tree. This ensures that the tree remains balanced and that the keys are in order. We then delete the minimum key from the right sub-tree.
 
+# B-Tree
+
+B-Tree stands for *Balanced Binary Tree*.
+
+- **Order:** Maximum number of children parent can have. Let's say that the order of a B-tree is `p`, then
+
+![[Order relation.png]]
+
+- **Record Pointer:** A record pointer is a pointer to a specific record in a file or database. When a key is searched for in a B-tree, the record pointer associated with that key is used to retrieve the corresponding record. This allows for efficient retrieval of individual records.
+
+- **Block Pointer:** A block pointer is a pointer to another node in the B-tree. Since B-trees are typically stored on disk or other secondary storage devices, it is important to minimize the number of disk accesses required to search the tree. By using block pointers, B-trees can be efficiently navigated with a minimal number of disk accesses.
+
+- **Key:** Key tell us on what base we're searching for the pointer.
+	- Number of `Keys` = Number of `record pointers`
+
+> Number of keys is always 1 less than number of children.
+
+#### How to solve finding order problems?
+
+1. Keep this concept in mind. 
+	
+	Total number of `block pointers times size of each block pointer` plus number of `keys times size of each key `plus total `number of record pointers times size of each pointer` has to be *less than or equal to the size of the block pointer*.
+
+2. Solve the inequality and find n (*the order*).
+
+# Difference between B-Tree and B+ Tree
 
