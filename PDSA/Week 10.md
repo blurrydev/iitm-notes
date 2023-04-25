@@ -84,6 +84,8 @@ The algorithm works by first computing the hash value of the pattern and the fir
 
 If the hash values do not match, the algorithm moves the window by one position and computes the hash value of the new window. This process is repeated until the end of the text string is reached.
 
+## Algorithm
+
 Here is a high-level algorithm for the Rabin-Karp string matching algorithm:
 
 1. Calculate the hash value of the pattern using a prime number.
@@ -126,4 +128,84 @@ def rabin_karp(text, pattern):
     return match_found
 ```
 
-# 
+# Knuth-Morris-Pratt Algorithm
+
+### Introduction
+
+- KMP is a string-matching algorithm that searches for occurrences of a pattern (substring) within a larger text.
+- It is an efficient algorithm that runs in O(n + m) time, where n is the length of the text and m is the length of the pattern.
+- The algorithm uses a "failure function" to determine where to resume matching in the event of a mismatch.
+- The failure function is precomputed from the pattern and used during the search phase to avoid redundant comparisons.
+- The failure function is calculated using the concept of "partial matches" of the pattern within itself, and the longest proper suffix of the partial match that is also a prefix of the pattern.
+- The failure function is represented as an array of integers, with each value indicating the length of the longest proper suffix of the pattern that matches a prefix of the pattern, up to and including the current position.
+- During the search phase, the text is scanned left-to-right, with the pattern compared against the text character-by-character.
+- If a mismatch occurs, the failure function is consulted to determine where to resume the comparison in the pattern, skipping over any characters that have already been compared and found to match.
+- If a match is found, the algorithm continues searching for further occurrences by continuing to scan the text and pattern from the next character after the match.
+
+### Codes
+
+```Python
+def kmp_fail(p):
+    m = len(p)                # length of pattern
+    fail = [0 for i in range(m)]  # initialize the fail array with 0s
+    j, k = 1, 0               # set two pointers j and k
+    while j < m:              # loop through the pattern
+        if p[j] == p[k]:      # if the characters match
+            fail[j] = k + 1   # set the fail value for j to k+1
+            j, k = j + 1, k + 1  # move both pointers forward
+        elif k > 0:           # if the characters don't match and k > 0
+            k = fail[k-1]     # move the k pointer to the previous fail value
+        else:                 # if the characters don't match and k == 0
+            j = j + 1        # move the j pointer forward
+    return(fail)              # return the fail array
+```
+
+```Output
+[0, 0, 0, 1, 1, 2, 3, 4]
+```
+
+```Python
+def find_kmp(t, p):
+    # Initialize an empty list to store the match positions
+    match = []
+    # Get the lengths of the text and pattern
+    n,m = len(t),len(p)
+    # If the pattern is an empty string, append 0 to the match positions list
+    if m == 0:
+        match.append(0)
+    # Calculate the failure function for the pattern
+    fail = kmp_fail(p)
+    # Initialize variables for pattern and text indices
+    j = 0
+    k = 0
+    # Iterate through the text
+    while j < n:
+        # If the current characters match, move to the next characters
+        if t[j] == p[k]:
+            # If we've reached the end of the pattern, a match has been found
+            if k == m - 1:
+                # Append the starting position of the match to the match positions list
+                match.append(j - m + 1)
+                # Reset the pattern and text indices to continue searching
+                k = 0
+                j = j - m + 2
+            # Otherwise, move to the next characters
+            else:
+                j,k = j+1,k+1
+        # If the current characters don't match, use the failure function to update the pattern index
+        elif k > 0:
+            k = fail[k-1]
+        # If the pattern index is already at the start, move to the next character in the text
+        else:
+            j = j+1
+    # Return the list of match positions
+    return(match)
+
+# Example usage
+print(find_kmp('ababaabbaba', 'aba'))
+```
+
+```Output
+[0, 2, 8]
+```
+
