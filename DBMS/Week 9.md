@@ -211,3 +211,36 @@ Overall, B+ trees are optimized for disk-based storage and are often used in dat
 - It requires additional storage space for the bitmap indexes, which can be a disadvantage for large datasets.
 - It can also be slower for write-heavy workloads as updating a row requires updating the corresponding bitmaps.
 - Bitmap Index is most commonly used in data warehousing applications, where fast retrieval of large datasets is a requirement.
+
+# Dynamic Hashing
+
+## Extendable Hashing
+
+- Set the initial global depth of the directory to 1 and create a directory with two entries.
+- Each entry in the directory points to a bucket of fixed size. Initially, create two buckets and assign each entry in the directory to one of the buckets.
+- When a new record needs to be inserted, compute its hash value and take the least significant (global depth) bits of the hash value to determine the bucket that it should be inserted into.
+- If the bucket has space for the new record, insert the record and we are done.
+- If the bucket is full, then we need to split it into two buckets. To split the bucket, increment its local depth by 1 and create two new buckets with the same local depth. Then, redistribute the records in the original bucket into the two new buckets based on the next bit in their hash values. Update the directory accordingly to point to the new buckets.
+- If the global depth of the directory is less than or equal to the local depth of the bucket, then we need to increase the global depth of the directory. To do this, we double the number of entries in the directory and copy each entry twice. The first entry points to the same bucket as before, and the second entry points to a new bucket with the same local depth as the first bucket. Update the directory to point to the new buckets.
+
+This process of splitting and doubling the directory can be repeated indefinitely as needed to handle a growing number of records. When a record needs to be deleted, we simply remove it from the appropriate bucket. If the bucket becomes empty after the deletion, we can merge it with its sibling bucket and update the directory accordingly.
+
+### Different cases to consider
+
+In extendible hashing, there are several cases to consider when performing operations like insertion, deletion, and searching. Here are some common cases:
+
+1. **If local depth equals global depth:** In this case, no split is required, and the record is inserted into the appropriate bucket.
+2. **If local depth is less than global depth:** In this case, the appropriate bucket is identified based on the hash value, and the record is inserted into the bucket. The bucket is then checked to see if it has reached its maximum capacity. If it has, the bucket is split into two new buckets, and the local depth is increased by 1.
+3. **If local depth is greater than global depth:** This should not happen in a correctly implemented extendible hashing scheme. However, if it does happen, it means that the directory has not been updated correctly, and the scheme needs to be reorganized to correct the problem.
+4. **If a record needs to be deleted:** The record is located using the hash function, and then it is removed from the appropriate bucket. If the bucket becomes empty after the deletion, the bucket is removed, and the local depth is decreased by 1 if it is safe to do so.
+5. **If the directory needs to be expanded:** If all the buckets for a particular hash prefix are full, and the local depth is equal to the global depth, then the directory needs to be expanded. This involves creating a new directory that has twice the number of entries as the current directory, and copying the appropriate entries from the old directory to the new one.
+
+Overall, extendible hashing provides a dynamic and efficient way to manage large datasets in a database. By using a hash function to bin records into buckets, extendible hashing enables fast searches and insertions, while also allowing for easy scalability.
+
+### In my words:
+
+It basically takes the hashed value of the elements and then tries to bin the elements based on the last digits of the hashed values of the elements. If the bin runs out of space then it will take one more digit to split the bin and accommodate it. 
+
+Unnecessary binning is not done, so if there is some bin where there is space then it won't be split and even after other bins split, then multiple keys which were pointing to this bin earlier, will keep pointing to this bin.
+
+
