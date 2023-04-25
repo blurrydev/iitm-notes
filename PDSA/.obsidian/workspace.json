@@ -8,37 +8,25 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0a29a3e9010d2790",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Week 6.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d1c26803623ac2d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Week 4.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "757d38106c708eec",
+            "id": "d019274db50482c3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Week 9.md",
-                "mode": "preview",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "022d6ee8c5a80a60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Week 10.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -94,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 221.5
+    "width": 221.5,
+    "collapsed": true
   },
   "right": {
     "id": "f2674f41ba1abe5f",
@@ -110,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Week 4.md",
+                "file": "Week 10.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Week 4.md",
+                "file": "Week 10.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Week 4.md"
+                "file": "Week 10.md"
               }
             }
           }
@@ -172,15 +161,17 @@
       "canvas:Create new canvas": false
     }
   },
-  "active": "d1c26803623ac2d4",
+  "active": "022d6ee8c5a80a60",
   "lastOpenFiles": [
+    "Week 9.md",
+    "Week 10.md",
+    "Week 4.md",
     "Week 3.md",
     "Week 7.md",
     "Week 8.md",
     "Week 5.md",
     "Week 6.md",
     "Week 5 Overview.canvas",
-    "Week 9.md",
     "attachments/Longest Common Substring.png",
     "attachments/Longest Common Subsequence.png",
     "attachments/Huffman Encoding.png",
@@ -193,7 +184,6 @@
     "Longest Common Subsequence.png",
     "Quiz 1 Revision.canvas",
     "Test.canvas",
-    "Week 4.md",
     "Week 2.md",
     "Week 1.md",
     "Azure Certification/DP-900 Cheatsheets.md",
