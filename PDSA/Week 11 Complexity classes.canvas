@@ -1,0 +1,15 @@
+{
+	"nodes":[
+		{"type":"text","text":"Universe of problems","id":"e44e9aa3a7dfbc32","x":-120,"y":-240,"width":207,"height":60},
+		{"type":"text","text":"Undecidable Problem","id":"620b8febce74c62a","x":100,"y":-124,"width":175,"height":60},
+		{"type":"text","text":"Decidable Problem","id":"285d3c25cd436023","x":-295,"y":-124,"width":175,"height":60},
+		{"type":"text","text":"### Tractable\n\n- Solvable in Polynomial Time\n- Also called *P-Class*\n- Eg. Dijkstra, Matrix Mul, Prims","id":"6c9ffbb92db2d24b","x":-540,"y":50,"width":280,"height":170},
+		{"type":"text","text":"### Intractable\n\n- Problems for which polynomial time verification/checking algorithm exists.\n- Also called *NP-Class*","id":"155c760055d5c66d","x":-180,"y":50,"width":280,"height":190}
+	],
+	"edges":[
+		{"id":"87fa80ff63a59a1c","fromNode":"e44e9aa3a7dfbc32","fromSide":"bottom","toNode":"285d3c25cd436023","toSide":"top"},
+		{"id":"83dad8263bf7b76b","fromNode":"e44e9aa3a7dfbc32","fromSide":"bottom","toNode":"620b8febce74c62a","toSide":"top"},
+		{"id":"1d0f01e9e758cb2f","fromNode":"285d3c25cd436023","fromSide":"bottom","toNode":"6c9ffbb92db2d24b","toSide":"top"},
+		{"id":"504a2c1e615a68f9","fromNode":"285d3c25cd436023","fromSide":"bottom","toNode":"155c760055d5c66d","toSide":"top"}
+	]
+}

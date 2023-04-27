@@ -25,8 +25,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Week 10.md",
-                "mode": "source",
+                "file": "Week 6.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -82,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "f2674f41ba1abe5f",
@@ -99,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Week 10.md",
+                "file": "Week 6.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Week 10.md",
+                "file": "Week 6.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Week 10.md"
+                "file": "Week 6.md"
               }
             }
           }
@@ -163,22 +162,22 @@
   },
   "active": "9881c8e4fd2f4272",
   "lastOpenFiles": [
-    "Untitled.md",
-    "Week 10.md",
+    "Week 5.md",
+    "Week 6.md",
+    "Week 8.md",
     "Week 9.md",
+    "Week 10.md",
+    "Untitled.md",
     "attachments/tree_structure.png",
     "attachments/2-3-4 trees.png",
     "attachments/Order relation.png",
-    "Week 8.md",
     "attachments/primary_secondary_clustered.png",
     "attachments",
     "Pasted image 20230419224707.png",
-    "Week 5.md",
     "Week 4.md",
     "Week 1.md",
     "Week 2.md",
     "Week 3.md",
-    "Week 6.md",
     "Normal Forms.canvas",
     "^relational o.md",
     "Azure Certification/DP-900 Cheatsheets.md",

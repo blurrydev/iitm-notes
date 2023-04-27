@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Week 9.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -26,7 +26,7 @@
               "type": "markdown",
               "state": {
                 "file": "Week 10.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -40,6 +40,21 @@
                 "file": "Week 11.md",
                 "mode": "source",
                 "source": false
+              }
+            }
+          },
+          {
+            "id": "472c2e24f52497f4",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Week 11 Complexity classes.canvas",
+                "viewState": {
+                  "x": -132.5,
+                  "y": 0,
+                  "zoom": -0.16972385887790326
+                }
               }
             }
           }
@@ -174,15 +189,18 @@
   },
   "active": "0f6f766524558faa",
   "lastOpenFiles": [
-    "Week 10.md",
+    "Week 11 Complexity classes.canvas",
     "Week 11.md",
-    "Week 9.md",
+    "Week 6.md",
+    "Week 5.md",
     "Week 4.md",
     "Week 3.md",
+    "Week 2.md",
+    "Week 1.md",
     "Week 7.md",
+    "Week 10.md",
+    "Week 9.md",
     "Week 8.md",
-    "Week 5.md",
-    "Week 6.md",
     "Week 5 Overview.canvas",
     "attachments/Longest Common Substring.png",
     "attachments/Longest Common Subsequence.png",
@@ -196,8 +214,6 @@
     "Longest Common Subsequence.png",
     "Quiz 1 Revision.canvas",
     "Test.canvas",
-    "Week 2.md",
-    "Week 1.md",
     "Azure Certification/DP-900 Cheatsheets.md",
     "Azure Certification/Data core concepts Cheatsheets.md"
   ]
