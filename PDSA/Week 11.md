@@ -34,4 +34,8 @@ Let's say there is a cut which divides the graph into two sets $S_1$ and $S_2$.
 - Now let's say the source is in $S_1$ and the sink is in $S_2$.
 - So the capacity of the cut is the sum of the capacity of the edges that the coming from $S_1$ to $S_2$.
 - Keep in mind that we're dealing with capacity and not flow.
+
+
+- *Flow* through the cut is equal to or smaller than the capacity if the cut.
+- *The maximum flow is always equal to the minimum capacity of the cut.*
 - 
