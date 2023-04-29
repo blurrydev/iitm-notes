@@ -35,14 +35,11 @@
             "id": "0f6f766524558faa",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Quiz 1 Revision.canvas",
-                "viewState": {
-                  "x": -620.1635810607879,
-                  "y": 1099.9683780705773,
-                  "zoom": 0.11349145799660741
-                }
+                "file": "Week 8.md",
+                "mode": "preview",
+                "source": false
               }
             }
           },
@@ -112,8 +109,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 221.5,
-    "collapsed": true
+    "width": 221.5
   },
   "right": {
     "id": "f2674f41ba1abe5f",
@@ -129,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Quiz 1 Revision.canvas",
+                "file": "Week 8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Quiz 1 Revision.canvas",
+                "file": "Week 8.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Quiz 1 Revision.canvas"
+                "file": "Week 8.md"
               }
             }
           }
@@ -193,20 +189,20 @@
   },
   "active": "0f6f766524558faa",
   "lastOpenFiles": [
-    "Week 5 Overview.canvas",
-    "Quiz 1 Revision.canvas",
-    "Week 2.md",
-    "Week 1.md",
-    "Week 8.md",
-    "Week 11.md",
-    "Week 11 Complexity classes.canvas",
+    "Week 9.md",
+    "Week 7.md",
     "Week 6.md",
     "Week 5.md",
+    "Week 5 Overview.canvas",
     "Week 4.md",
     "Week 3.md",
-    "Week 7.md",
     "Week 10.md",
-    "Week 9.md",
+    "Week 8.md",
+    "Week 11.md",
+    "Quiz 1 Revision.canvas",
+    "Week 1.md",
+    "Week 2.md",
+    "Week 11 Complexity classes.canvas",
     "attachments/Longest Common Substring.png",
     "attachments/Longest Common Subsequence.png",
     "attachments/Huffman Encoding.png",

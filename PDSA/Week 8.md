@@ -250,8 +250,9 @@ To analyze the time complexity of a recursive algorithm using a recursion tree, 
 
 If we can write the complexity of recursion relation as:
 
-									$T(n) = aT(n/b) + f(n), a>=1, b>1$
-									$T(n) = aT(n/b) + \Theta(n^c), a>=1, b>1$
+$T(n) = aT(n/b) + f(n), a>=1, b>1$
+$T(n) = aT(n/b) + \Theta(n^c), a>=1, b>1$
+
  > $f(n) = \Theta(n^c)$
 									
 1. Find $log_b$ $a$

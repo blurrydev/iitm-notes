@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Week 6.md",
+                "file": "Week 8.md",
                 "mode": "preview",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Week 6.md",
+                "file": "Week 8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Week 6.md",
+                "file": "Week 8.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Week 6.md"
+                "file": "Week 8.md"
               }
             }
           }
@@ -162,10 +162,10 @@
   },
   "active": "9881c8e4fd2f4272",
   "lastOpenFiles": [
-    "Week 5.md",
-    "Week 6.md",
-    "Week 8.md",
     "Week 9.md",
+    "Week 6.md",
+    "Week 5.md",
+    "Week 8.md",
     "Week 10.md",
     "Untitled.md",
     "attachments/tree_structure.png",
