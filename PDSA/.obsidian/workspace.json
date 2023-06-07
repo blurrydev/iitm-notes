@@ -35,14 +35,11 @@
             "id": "0f6f766524558faa",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Quiz 1 Revision.canvas",
-                "viewState": {
-                  "x": -620.1635810607879,
-                  "y": 1099.9683780705773,
-                  "zoom": 0.11349145799660741
-                }
+                "file": "Week 8.md",
+                "mode": "preview",
+                "source": false
               }
             }
           },
@@ -128,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Week 10.md",
+                "file": "Week 8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Week 10.md",
+                "file": "Week 8.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -168,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Week 10.md"
+                "file": "Week 8.md"
               }
             }
           }
@@ -192,20 +189,20 @@
   },
   "active": "022d6ee8c5a80a60",
   "lastOpenFiles": [
-    "Week 11.md",
     "Week 9.md",
-    "Week 10.md",
-    "Quiz 1 Revision.canvas",
-    "Week 11 Complexity classes.canvas",
-    "Week 5 Overview.canvas",
-    "Week 2.md",
-    "Week 1.md",
-    "Week 8.md",
+    "Week 7.md",
     "Week 6.md",
     "Week 5.md",
+    "Week 5 Overview.canvas",
     "Week 4.md",
     "Week 3.md",
-    "Week 7.md",
+    "Week 10.md",
+    "Week 8.md",
+    "Week 11.md",
+    "Quiz 1 Revision.canvas",
+    "Week 1.md",
+    "Week 2.md",
+    "Week 11 Complexity classes.canvas",
     "attachments/Longest Common Substring.png",
     "attachments/Longest Common Subsequence.png",
     "attachments/Huffman Encoding.png",
