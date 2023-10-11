@@ -52,14 +52,20 @@ To calculate the permission code for a file, you add up the numeric values of th
 
 # Commands
 
-- `date`: Display date and time
-- `cal`: Display calendar
+- `date`: Display date and time.
+- `ps`: Lists current processes.
+- `cal`: Display calendar.
 	- can be clubbed with a month and year to display specific month.
 	- `cal Jun 1999`
 	- cannot be clubbed with only month, but can be with only year.
 - `free`: Shows memory stats.
 - `groups`: Groups to which the current user belongs to.
 - `file` {followed by file name}: To check the type of file.
+- `less`: It is used to read the contents of a file.
+
+> `less` does not work like `cat`. `cat` prints the value on the screen whereas less enables you to read it and then provides an option to quit the reading mode once done.
+
+> There is another command called `more` which works like `cat`.
 
 
 - `chmod` is used to change the permissions of files and directories in Linux.
@@ -79,7 +85,7 @@ To calculate the permission code for a file, you add up the numeric values of th
 	- Recursive permission changes can be done using the `-R` flag.
 
 - `touch`: 
-	- - `touch` is used to create new files or update timestamps of existing files.
+	- `touch` is used to create new files or update timestamps of existing files.
 	- If the file already exists, `touch` updates the access and modification timestamps to the current time.
 	- If the file doesn't exist, `touch` creates an empty file with the specified name.
 	- Common usage: `touch filename` or `touch file1 file2 file3` to create or update the timestamps of one or multiple files.
@@ -89,7 +95,7 @@ To calculate the permission code for a file, you add up the numeric values of th
 	- Use the `-r` option to copy the timestamps from an existing file.
 
 - `cp`: 
-	-  `cp` is used to copy files and directories in Linux.
+	- `cp` is used to copy files and directories in Linux.
 	- Syntax: `cp source_file destination_file`.
 	- To copy a file to a directory: `cp file.txt directory/`.
 	- To copy multiple files to a directory: `cp file1.txt file2.txt directory/`.
@@ -98,7 +104,7 @@ To calculate the permission code for a file, you add up the numeric values of th
 	- Use the `-u` option to only copy files that are newer than the destination files.
 	- Example: `cp file.txt backup/` copies "file.txt" to the "backup" directory.
 - `mv`: 
-	- - `mv` is used to move or rename files and directories in Linux.
+	-  `mv` is used to move or rename files and directories in Linux.
 	- Syntax: `mv source_file destination_file`.
 	- To move a file to a directory: `mv file.txt directory/`.
 	- To rename a file: `mv old_name.txt new_name.txt`.
@@ -106,13 +112,13 @@ To calculate the permission code for a file, you add up the numeric values of th
 	- Use the `-i` option for interactive mode, prompting before overwriting existing files.
 	- Example: `mv file.txt documents/` moves "file.txt" to the "documents" directory.
 - `mkdir`: 
-	-  `mkdir` is used to create directories in Linux.
+	- `mkdir` is used to create directories in Linux.
 	- Syntax: `mkdir directory_name`.
 	- To create multiple directories: `mkdir dir1 dir2 dir3`.
 	- Use the `-p` option to create parent directories if they don't exist.
 	- Example: `mkdir new_directory` creates a directory named "new_directory".
-- `rm`: R
-	-  `rm` is used to remove files and directories in Linux.
+- `rm`: 
+	- `rm` is used to remove files and directories in Linux.
 	- Syntax: `rm file.txt` or `rm -r directory/` for recursive removal.
 	- Use the `-i` option for interactive mode, prompting for confirmation before deleting each file.
 	- Use the `-f` option to force removal without confirmation.
@@ -123,5 +129,5 @@ To calculate the permission code for a file, you add up the numeric values of th
 	- `-l`: Shows the same thing but with long details. [Read More](#Output%20of%20`ls%20-l`)
 	- `-a`: Shows all files and directories, even the hidden ones.
 	- `-la`: Hybrid of the above two.
+ 
 - `pwd`: Returns the Present Working Directory
-- 
