@@ -26,3 +26,4 @@ console.log(c); // Output: 3
 - **Managing Arrays:** We can manage JS arrays by assigning `null` to clear their contents. Additionally, unlike python we can directly set the length of an array and for the extra indices JS will assign them `null` values.
 
 # Lecture 2: Basic Calculator
+
