@@ -113,7 +113,24 @@ export default {
 
 ## Components
 
-### 
+### Reusable
+
+- We can use components to reuse our code into multiple places within our application.
+- It reduces code duplication.
+- Makes it easier to maintain consistency.
+- Makes it more readable.
+
+### Vue Component Structure
+
+- **Properties:** These are passed down from parents to the child and we can customize each child instance.
+- **Data:** Individual data of the child also the it's own watchers, computed properties.
+- **Templates:** It tells the code how to render. We can also render functions.
+
+### Templates
+
+- Templates format is similar to Jinja syntax.
+- It also has safety features
+
 
 ## How does reactivity work:
 
