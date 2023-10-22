@@ -1,4 +1,4 @@
-# Live Lecture
+# Live Lecture - Part 1
 
 ## Declarative Rendering: 
 1. Reactivity: 
@@ -129,11 +129,13 @@ export default {
 ### Templates
 
 - Templates format is similar to Jinja syntax.
-- It also has safety features
+- It also has safety features 
+
+### Slots
+
+This allows us to pass content into a component from it's parent component. 
 
 
-## How does reactivity work:
+# Components in Vue Js
 
-- Why do we need Reactivity:
-	- To check if some values are modified.
-- 
+
