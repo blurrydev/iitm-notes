@@ -61,3 +61,12 @@
 
 > Application state and UI state are the most crucial states in terms of designing an application and it's frontend.
 
+## Application and UI Management
+
+- HTTP (Hypertext Transfer Protocol) is a *stateless protocol* used for communication between clients (typically web browsers) and servers (web servers).
+- It follows a request-response model, where a client sends an HTTP request to a server, and the server responds with the requested information.
+- Each HTTP request-response cycle is independent and stateless. This means the *server doesn't inherently remember past requests from the same client*. Each request must contain all the information needed to process it.
+
+To solve this issue two things can be done:
+1. *Client can maintain the state* and request specific items from the server based on the state.
+2. *Server can maintain the state* and send specific items to client based on the state.
